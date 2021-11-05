@@ -16,7 +16,6 @@ class Team:
     yellowCard = 0
     yellowAndRed = 0
     red = 0
-    MBP = False
 
     def __init__(self, name):
         self.name = name
@@ -40,6 +39,3 @@ class Team:
 
     def getDistanceCovered(self):
         return self.distanceCovered + "%"
-
-    def switchMBP(self):
-        self.MBP = not self.MBP
