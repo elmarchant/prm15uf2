@@ -39,3 +39,6 @@ class Team:
 
     def getDistanceCovered(self):
         return self.distanceCovered + "%"
+
+    def __str__(self) -> str:
+        return self.name

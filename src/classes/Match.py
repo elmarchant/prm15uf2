@@ -27,5 +27,8 @@ class Match:
     def matchResult(self):
         return str(self.local.name) + ": " + str(self.local.goals) + " - " + str(self.visitor.name) + ": " + str(self.visitor.goals)
 
-    def __str__(self) -> str:
+    def getID(self) -> str:
         return self.getDate() + " | " + str(self.local.name) + " - " + str(self.visitor.name)
+    
+    def __str__(self) -> str:
+        return self.getID()
