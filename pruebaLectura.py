@@ -12,3 +12,6 @@ data = LoadMatchData("./src/data/main.csv")
 
 for i in data.getGames():
     print(i)
+
+for i in data.data:
+    print(i)

@@ -13,7 +13,16 @@ class Match:
         self.date = datetime.datetime(year, month, day)
 
     def getDate(self) -> str:
-        return str(self.date.day) + '-' + str(self.date.month) + '-' + str(self.date.year)
+        month = str(self.date.month)
+        day = str(self.date.day)
+        
+        if self.date.month < 10:
+            month = '0' + month
+        
+        if self.date.day < 10:
+            day = '0' + day
+
+        return  day + '-' + month + '-' + str(self.date.year)
 
     def matchResult(self):
         return str(self.local.name) + ": " + str(self.local.goals) + " - " + str(self.visitor.name) + ": " + str(self.visitor.goals)
