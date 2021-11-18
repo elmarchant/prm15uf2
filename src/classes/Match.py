@@ -30,7 +30,7 @@ class Match:
     def getID(self) -> str:
         return self.getDate() + " | " + str(self.local.name) + " - " + str(self.visitor.name)
     
-    def __equal__(self, other) -> bool:
+    def __eq__(self, other: object) -> bool:
         if self.getID() == other.getID():
             return True
         else:
