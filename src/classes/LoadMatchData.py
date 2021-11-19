@@ -65,6 +65,15 @@ class LoadMatchData:
                             self.games.append(match)
                             games.append(i1['Date'] + " | " + i1['Team'] + " - " + i1['Opponent'])
                             
+    def getMatchById(self, id) -> Match:
+        match = Match()
+
+        for item in self.games:
+            if item.getID() == id:
+                match = item
+                break
+
+        return match
 
     def getGames(self):
         return self.games

@@ -30,6 +30,19 @@ class Match:
     def getID(self) -> str:
         return self.getDate() + " | " + str(self.local.name) + " - " + str(self.visitor.name)
     
+    def displayHighLights(self) -> None:
+        print(self.local.name, self.visitor.name, sep=" - ")
+        print(self.local.goals, self.visitor.goals, sep=" goals ")
+        print(self.local.attempts, self.visitor.attempts, sep=" attempts ")
+        print(self.local.onTarget, self.visitor.onTarget, sep=" on target ")
+        print(str(self.local.possesion)+"%", str(self.visitor.possesion)+"%", sep=" possession % ")
+        print(self.local.passes, self.visitor.passes, sep=" passes ")
+        print(str(self.local.passAccuracy)+"%", str(self.visitor.passAccuracy)+"%", sep=" pass accuracy %")
+        print(self.local.yellowCard, self.visitor.yellowCard, sep=" yellow cards ")
+        print(print(self.local.red, self.visitor.red, sep=" red cards "))
+
+        
+
     def __eq__(self, other: object) -> bool:
         if self.getID() == other.getID():
             return True
