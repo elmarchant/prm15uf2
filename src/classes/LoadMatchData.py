@@ -75,5 +75,5 @@ class LoadMatchData:
 
         return match
 
-    def getGames(self):
-        return self.games
+    def getGames(self) -> tuple:
+        return tuple(self.games)
